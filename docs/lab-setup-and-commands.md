@@ -41,7 +41,7 @@ ipconfig /all
 ### Test Connectivity
 
 ```powershell id="h7ay30"
-ping 192.168.2.133
+ping 192.168.21.136
 ```
 
 ### Verify UDP Port 514
@@ -121,25 +121,25 @@ ip route
 ## Test Target Connectivity
 
 ```bash id="yjlwmx"
-ping 192.168.2.133
+ping 192.168.21.136
 ```
 
 ## Verify SSH Service
 
 ```bash id="1pn0yj"
-nmap -sV 192.168.2.133
+nmap -sV 192.168.21.136
 ```
 
 ## Verify Port 22
 
 ```bash id="h08x0f"
-nmap -p 22 192.168.2.133
+nmap -p 22 192.168.21.136
 ```
 
 ## Verify Host Discovery
 
 ```bash id="y8x20i"
-nmap -sn 192.168.2.0/24
+nmap -sn 192.168.21.0/24
 ```
 
 ---
@@ -167,7 +167,7 @@ arp -a
 ## Verify Kali Connectivity
 
 ```bash id="l8l4vb"
-ping -c 4 192.168.2.128
+ping -c 4 192.168.21.129
 ```
 
 ## Edit Syslog Configuration
@@ -179,19 +179,19 @@ nano /etc/syslog.conf
 Add:
 
 ```text id="p71z4h"
-*.* @192.168.2.1
+*.* @192.168.21.19
 ```
 
 ## Verify Configuration
 
 ```bash id="1lmgdn"
-grep "@192.168.2.1" /etc/syslog.conf
+grep "@192.168.21.19" /etc/syslog.conf
 ```
 
 Expected:
 
 ```text id="z7f2ki"
-*.* @192.168.2.1
+*.* @192.168.21.19
 ```
 
 ## Restart Syslog Service
@@ -299,7 +299,7 @@ netstat -ano -p udp | findstr 514
 Verify Syslog Configuration:
 
 ```bash id="h1r65n"
-grep "@192.168.2.1" /etc/syslog.conf
+grep "@192.168.21.19" /etc/syslog.conf
 ```
 
 Verify Service Status:
@@ -311,7 +311,7 @@ Verify Service Status:
 Verify Network Connectivity:
 
 ```bash id="ltj3d7"
-ping 192.168.2.1
+ping 192.168.21.19
 ```
 
 ---
