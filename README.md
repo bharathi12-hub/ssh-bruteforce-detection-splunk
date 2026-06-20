@@ -97,8 +97,6 @@ Restart Syslog service after configuration changes.
 
 Verify log ingestion using test messages and authentication-related events.
 
-Example SPL Queries:
-
 ### View All Syslog Events
 
 ```spl
@@ -121,6 +119,12 @@ index=ssh_bruteforce "authentication failure"
 
 ```spl
 index=ssh_bruteforce "Failed password"
+```
+
+### Verify Test Message Ingestion
+
+```spl
+index=ssh_bruteforce SPLUNK_TEST_MESSAGE
 ```
 
 ---
@@ -179,17 +183,93 @@ Additional project documentation is available in the `/docs` folder:
 
 ---
 
+## Results
+
+The project successfully demonstrated centralized log collection and security event monitoring using Splunk SIEM.
+
+### Key Results
+
+* Successfully configured Syslog forwarding from Metasploitable 2 to Splunk Enterprise.
+* Verified ingestion of Linux authentication and system logs through UDP port 514.
+* Generated and analyzed SSH authentication failure events.
+* Indexed and searched security events using Splunk Search Processing Language (SPL).
+* Demonstrated end-to-end SIEM workflow from log generation to investigation.
+
+---
+
+## Key Achievements
+
+* Built a functional SIEM monitoring lab using VMware Workstation.
+* Centralized Linux logs into Splunk using Syslog.
+* Created SPL queries for security event investigation.
+* Validated log visibility and searchability within Splunk.
+* Documented architecture, workflows, and detection procedures.
+
+---
+
+## Sample SPL Queries
+
+| Use Case                   | Query                                           |
+| -------------------------- | ----------------------------------------------- |
+| View All Syslog Events     | `index=ssh_bruteforce sourcetype=syslog`        |
+| View Metasploitable Events | `host=METASPLOITABLE`                           |
+| Authentication Failures    | `index=ssh_bruteforce "authentication failure"` |
+| Failed Password Events     | `index=ssh_bruteforce "Failed password"`        |
+| Test Message Verification  | `index=ssh_bruteforce SPLUNK_TEST_MESSAGE`      |
+
+---
+
 ## Skills Demonstrated
 
 * Security Information and Event Management (SIEM)
-* Log Collection and Management
 * Splunk Enterprise Administration
-* Security Event Analysis
-* Linux Log Monitoring
+* Linux System Administration
 * Syslog Configuration
+* Log Collection and Management
+* Security Event Analysis
 * Search Processing Language (SPL)
 * Incident Investigation
-* Security Operations (SOC) Fundamentals
+* Security Operations Center (SOC) Fundamentals
+
+---
+
+## Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* SIEM deployment and configuration
+* Syslog-based log forwarding
+* Splunk Enterprise administration
+* SPL query development
+* Linux authentication log analysis
+* Security monitoring workflows
+* Event investigation and troubleshooting
+* SOC analyst fundamentals
+
+---
+
+## Repository Structure
+
+```text
+ssh-bruteforce-detection-splunk/
+│
+├── README.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── attack-simulation.md
+│   ├── splunk-searches.md
+│   └── alerting.md
+│
+└── screenshots/
+    ├── 01-syslog-events-ingested.png
+    ├── 02-syslog-events-ingested-alt.png
+    ├── 03-host-metasploitable-search.png
+    ├── 04-host-search-results.png
+    ├── 05-splunk-test-message.png
+    ├── 06-ssh-bruteforce-events.png
+    └── 07-ssh-bruteforce-index-search.png
+```
 
 ---
 
@@ -208,4 +288,8 @@ Additional project documentation is available in the `/docs` folder:
 
 **Bharathithasan S**
 
-Cyber Security Student | Splunk | SIEM | Linux | Security Monitoring
+BE Computer Science and Engineering (Cyber Security)
+
+GitHub: https://github.com/bharathi12-hub
+
+Skills: Splunk • SIEM • Linux • Syslog • Security Monitoring • SOC
