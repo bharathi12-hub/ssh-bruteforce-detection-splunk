@@ -258,6 +258,7 @@ ssh-bruteforce-detection-splunk/
 ├── docs/
 │   ├── architecture.md
 │   ├── attack-simulation.md
+│   ├── lab-setup-and-commands.md
 │   ├── splunk-searches.md
 │   └── alerting.md
 │
