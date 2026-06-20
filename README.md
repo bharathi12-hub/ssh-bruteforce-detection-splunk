@@ -52,3 +52,25 @@ Configured `/etc/syslog.conf`:
 
 ```bash
 *.* @<SPLUNK_IP>
+## Screenshots
+
+### 1. Syslog Events Ingested
+![Syslog Events](screenshots/01-syslog-events-ingested.png)
+
+### 2. Additional Syslog Events
+![Syslog Events Alt](screenshots/02-syslog-events-ingested-alt.png)
+
+### 3. Metasploitable Host Search
+![Host Search](screenshots/03-host-metasploitable-search.png)
+
+### 4. Host Search Results
+![Host Results](screenshots/04-host-search-results.png)
+
+### 5. Splunk Test Message Verification
+![Test Message](screenshots/05-splunk-test-message.png)
+
+### 6. SSH Brute-Force Events
+![SSH Brute Force](screenshots/06-ssh-bruteforce-events.png)
+
+### 7. SSH Brute-Force Index Search
+![Index Search](screenshots/07-ssh-bruteforce-index-search.png)
