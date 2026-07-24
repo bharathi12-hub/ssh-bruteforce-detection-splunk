@@ -75,6 +75,10 @@ Searches, Monitoring & Analysis
 * Source Type: syslog
 * Index: ssh_bruteforce
 
+> Ready-to-deploy `.conf` files (input, field extractions, and the scheduled alert) are in
+> [`splunk-config/`](splunk-config/). You can validate them against [`sample-data/`](sample-data/)
+> without building the full lab.
+
 ### Metasploitable Configuration
 
 Edit:
@@ -158,6 +162,17 @@ Detailed project documentation is organized into three folders:
 * [brute-force-threshold-detection.md](Detection-Rules/brute-force-threshold-detection.md)
 * [authentication-failure-detection.md](Detection-Rules/authentication-failure-detection.md)
 * [invalid-user-detection.md](Detection-Rules/invalid-user-detection.md)
+* [mitre-attack-mapping.md](Detection-Rules/mitre-attack-mapping.md) — MITRE ATT&CK mapping (T1110)
+
+**`splunk-config/` — ready-to-deploy Splunk configs**
+
+* [inputs.conf](splunk-config/inputs.conf) — UDP 514 Syslog input
+* [props.conf](splunk-config/props.conf) — field extractions (`user`, `src_ip`, `src_port`)
+* [savedsearches.conf](splunk-config/savedsearches.conf) — scheduled brute-force alert
+
+**`sample-data/` — replicate without the VM lab**
+
+* [auth.log](sample-data/auth.log) — sanitized sample `sshd` events ([how to load](sample-data/README.md))
 
 **`Reports/` — analyst deliverables**
 
@@ -271,6 +286,7 @@ Through this project, I gained practical experience in:
 ssh-bruteforce-detection-splunk/
 │
 ├── README.md
+├── LICENSE
 │
 ├── docs/
 │   ├── architecture.md
@@ -283,7 +299,17 @@ ssh-bruteforce-detection-splunk/
 │   ├── ssh-failed-password-detection.md
 │   ├── brute-force-threshold-detection.md
 │   ├── authentication-failure-detection.md
-│   └── invalid-user-detection.md
+│   ├── invalid-user-detection.md
+│   └── mitre-attack-mapping.md
+│
+├── splunk-config/
+│   ├── inputs.conf
+│   ├── props.conf
+│   └── savedsearches.conf
+│
+├── sample-data/
+│   ├── auth.log
+│   └── README.md
 │
 ├── Reports/
 │   ├── executive-summary.md
@@ -311,6 +337,12 @@ ssh-bruteforce-detection-splunk/
 * Threat intelligence enrichment
 * Automated incident response workflows
 * Detection rule tuning
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
 
 ---
 

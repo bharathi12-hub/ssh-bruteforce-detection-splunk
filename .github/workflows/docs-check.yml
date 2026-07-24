@@ -1,0 +1,22 @@
+name: Docs Check
+
+on: [push, pull_request]
+
+jobs:
+  screenshots:
+    name: Verify README screenshots exist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every screenshot referenced in README is present
+        run: |
+          missing=0
+          for f in $(grep -oE 'screenshots/[A-Za-z0-9._-]+\.png' README.md | sort -u); do
+            if [ -f "$f" ]; then
+              echo "OK: $f"
+            else
+              echo "MISSING: $f"
+              missing=1
+            fi
+          done
+          exit $missing

@@ -1,0 +1,14 @@
+Jul 20 10:14:58 metasploitable sshd[2440]: Server listening on 0.0.0.0 port 22.
+Jul 20 10:15:02 metasploitable sshd[2451]: Failed password for invalid user admin from 192.168.2.128 port 40122 ssh2
+Jul 20 10:15:02 metasploitable sshd[2451]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.2.128
+Jul 20 10:15:03 metasploitable sshd[2453]: Failed password for root from 192.168.2.128 port 40124 ssh2
+Jul 20 10:15:04 metasploitable sshd[2455]: Failed password for invalid user test from 192.168.2.128 port 40126 ssh2
+Jul 20 10:15:05 metasploitable sshd[2457]: Failed password for invalid user oracle from 192.168.2.128 port 40128 ssh2
+Jul 20 10:15:06 metasploitable sshd[2459]: Failed password for root from 192.168.2.128 port 40130 ssh2
+Jul 20 10:15:07 metasploitable sshd[2461]: Invalid user postgres from 192.168.2.128
+Jul 20 10:15:07 metasploitable sshd[2461]: Failed password for invalid user postgres from 192.168.2.128 port 40132 ssh2
+Jul 20 10:15:09 metasploitable sshd[2463]: Failed password for root from 192.168.2.128 port 40134 ssh2
+Jul 20 10:17:41 metasploitable sshd[2502]: Failed password for invalid user git from 10.0.0.55 port 51002 ssh2
+Jul 20 10:17:43 metasploitable sshd[2504]: Failed password for invalid user jenkins from 10.0.0.55 port 51004 ssh2
+Jul 20 10:19:10 metasploitable sshd[2530]: Accepted password for msfadmin from 192.168.2.10 port 40200 ssh2
+Jul 20 10:19:10 metasploitable sshd[2530]: pam_unix(sshd:session): session opened for user msfadmin by (uid=0)
