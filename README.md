@@ -142,12 +142,29 @@ index=ssh_bruteforce SPLUNK_TEST_MESSAGE
 
 ## Documentation
 
-Additional project documentation is available in the `/docs` folder:
+Detailed project documentation is organized into three folders:
 
-* architecture.md
-* attack-simulation.md
-* splunk-searches.md
-* alerting.md
+**`docs/` — setup & methodology**
+
+* [architecture.md](docs/architecture.md) — lab and data-flow architecture
+* [lab-setup-and-commands.md](docs/lab-setup-and-commands.md) — full lab build and command reference
+* [attack-simulation.md](docs/attack-simulation.md) — how the brute-force attack was simulated
+* [splunk-searches.md](docs/splunk-searches.md) — SPL search reference
+* [alerting.md](docs/alerting.md) — alert configuration
+
+**`Detection-Rules/` — SIEM detection logic**
+
+* [ssh-failed-password-detection.md](Detection-Rules/ssh-failed-password-detection.md)
+* [brute-force-threshold-detection.md](Detection-Rules/brute-force-threshold-detection.md)
+* [authentication-failure-detection.md](Detection-Rules/authentication-failure-detection.md)
+* [invalid-user-detection.md](Detection-Rules/invalid-user-detection.md)
+
+**`Reports/` — analyst deliverables**
+
+* [executive-summary.md](Reports/executive-summary.md)
+* [incident-report.md](Reports/incident-report.md)
+* [attack-timeline.md](Reports/attack-timeline.md)
+* [lessons-learned.md](Reports/lessons-learned.md)
 
 ---
 
@@ -261,6 +278,18 @@ ssh-bruteforce-detection-splunk/
 │   ├── lab-setup-and-commands.md
 │   ├── splunk-searches.md
 │   └── alerting.md
+│
+├── Detection-Rules/
+│   ├── ssh-failed-password-detection.md
+│   ├── brute-force-threshold-detection.md
+│   ├── authentication-failure-detection.md
+│   └── invalid-user-detection.md
+│
+├── Reports/
+│   ├── executive-summary.md
+│   ├── incident-report.md
+│   ├── attack-timeline.md
+│   └── lessons-learned.md
 │
 └── screenshots/
     ├── 01-syslog-events-ingested.png
